@@ -5,7 +5,7 @@ from datetime import datetime
 from googleapiclient.discovery import build
 
 SEARCH_RESULTS_FILE = "search_results.json"
-YT_API_KEY = os.getenv('YT_API_KEY')
+YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 RESULTS_COUNT = 10
 OPTIONS = {
     'n': 'ввести новый запрос',
@@ -17,7 +17,7 @@ OPTIONS = {
 
 def get_youtube_service() -> build:
     """Создает и возвращает объект YouTube API service, используя ключ API из переменной окружения."""
-    youtube = build('youtube', 'v3', developerKey=YT_API_KEY)
+    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     return youtube
 
 
